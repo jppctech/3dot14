@@ -41,7 +41,7 @@ export default function Home() {
           <ContactUs/>
         </motion.div>
       )}
-        <motion.div animate={isOpenMenu? {opacity: [0,1], y:0}: {opacity: 0}} initial={{y:-800}} transition={{duration: 1, ease: "easeIn"}} className=" absolute top-0 right-0 bg-white" >
+        <motion.div animate={isOpenMenu? {opacity: [0,1], y:0}: {opacity: 0}} initial={{y:-800}} transition={{duration: 1, ease: "easeIn"}} className=" absolute w-full top-0 right-0 bg-white" >
             <PhoneMenu/>
         </motion.div>
     </div>
