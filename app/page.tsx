@@ -19,7 +19,6 @@ export default function Home() {
   const {isOpen} = useOpenGetStarted();
   const { isOpenMenu} = useOpenMenuPhone();
 
-
   useEffect(() => {
     setMount(true)
   })

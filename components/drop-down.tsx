@@ -7,6 +7,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { ChevronDown, Users} from "lucide-react"
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 type items = {
@@ -22,6 +23,7 @@ type Props = {
 export default function DropDownMenu(content: Props) {
 
     const [isScrolled, setIsScrolled] = useState(false);
+    const router = useRouter();
 
     useEffect(() => {
         const handleScroll = () => {
