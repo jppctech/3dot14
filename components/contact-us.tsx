@@ -13,7 +13,7 @@ const ContactUs = () => {
                 <IoMdClose/>
             </Button>
             <div className=" w-full max-w-screen-2xl mx-auto grid md:grid-cols-2 md:mt-32 mt-12">
-                <div className="w-full">
+                <div className="w-full px-4">
                     <p className="md:text-4xl text-2xl">We empower you to boost your business</p>
                     <p className="mt-10">3dot14 understands the needs of the business in-depth and provide the solutions accordingly. We were able to drive higher than usual engagements through sharp targeting and effective creatives.</p>
                     <div className="mt-4 flex gap-6">
