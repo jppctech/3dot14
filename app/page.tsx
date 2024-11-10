@@ -14,7 +14,7 @@ import { useEffect, useState } from "react";
 export default function Home() {
   const [mount, setMount] = useState(false)
   const {isOpen} = useOpenGetStarted();
-  const { onOpenMenu, isOpenMenu} = useOpenMenuPhone();
+  const { isOpenMenu} = useOpenMenuPhone();
 
 
   useEffect(() => {
