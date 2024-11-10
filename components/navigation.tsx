@@ -10,7 +10,7 @@ import { useEffect, useState } from "react"
 export const Navigation = () => {
     const isMobile = useMedia("(max-width: 1024px)", false)
     const { onOpen } = useOpenGetStarted();
-    const { onOpenMenu, isOpenMenu} = useOpenMenuPhone();
+    const { onOpenMenu } = useOpenMenuPhone();
 
     const [mount, setMount] = useState(false)
 
