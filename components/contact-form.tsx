@@ -60,7 +60,7 @@ export default function ContactForm() {
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="space-y-2">
-          <Label htmlFor="spend">What's your current programmatic spend?</Label>
+          <Label htmlFor="spend">What&apos;s your current programmatic spend?</Label>
           <Select name="spend" onValueChange={(value) => handleSelectChange('spend', value)}>
             <SelectTrigger>
               <SelectValue placeholder="Select spend range" />
