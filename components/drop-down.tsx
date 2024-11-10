@@ -7,6 +7,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { ChevronDown, Users} from "lucide-react"
+import { useEffect, useState } from "react";
 
 type items = {
     icons: any;
@@ -19,10 +20,28 @@ type Props = {
 }
 
 export default function DropDownMenu(content: Props) {
+
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+          if (window.scrollY > 60) {
+            setIsScrolled(true);
+          } else {
+            setIsScrolled(false);
+          }
+        };
+        
+        window.addEventListener('scroll', handleScroll);
+        
+        return () => {
+          window.removeEventListener('scroll', handleScroll);
+        };
+        }, []);
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button variant="default" className=" bg-transparent outline-none hover:bg-[#13141E]">
+      <DropdownMenuTrigger asChild className="shadow-none outline-none">
+        <Button variant="default" className={` bg-transparent ${isScrolled ? 'text-black': "text-white"} outline-none hover:bg-transparent`}>
           {content.head}
           <ChevronDown className="ml-2 h-4 w-4" />
         </Button>
