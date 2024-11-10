@@ -3,7 +3,7 @@ import { Button } from "./ui/button"
 
 const GrowYourApp = () => {
     return (
-        <div className="max-w-screen-2xl mx-auto w-full flex flex-col pb-20">
+        <div className="max-w-screen-2xl mx-auto w-full flex flex-col py-10">
             <section className="w-full flex flex-col items-center gap-10">
                 <div className="w-full flex flex-col items-center gap-4 text-center">
                     <p className="text-4xl font-[600]">The all-in-one platform to grow your app</p>
@@ -75,25 +75,25 @@ const GrowYourApp = () => {
                 <div className="max-w-screen-2xl w-full flex flex-col mt-4 gap-6">
                     <p className="w-full flex text-4xl font-[500] justify-center">3dot14 by the count</p>
                     
-                    <div className="w-full items-center flex justify-between">
+                    <div className="w-full items-center grid md:grid-cols-4 md:gap-0 gap-8">
                         <div className="flex flex-col gap-2 items-center">
-                            <p className="text-[#0991f8] text-6xl font-[500]">3.5Bn+</p>
-                            <p className="font-[500] text-lg">Users across apps</p>
+                            <p className="text-[#0991f8] md:text-6xl text-4xl font-[500]">3.5Bn+</p>
+                            <p className="font-[500] md:text-lg text-sm">Users across apps</p>
                         </div>
 
                         <div className="flex flex-col gap-2 items-center">
-                            <p className="text-[#0991f8] text-6xl font-[500]">110+</p>
-                            <p className="font-[500] text-lg">Countries engaged</p>
+                            <p className="text-[#0991f8] md:text-6xl text-4xl font-[500]">110+</p>
+                            <p className="font-[500] md:text-lg text-sm">Countries engaged</p>
                         </div>
 
                         <div className="flex flex-col gap-2 items-center">
-                            <p className="text-[#0991f8] text-6xl font-[500]">100 Bn+</p>
-                            <p className="font-[500] text-lg">Daily Ad request</p>
+                            <p className="text-[#0991f8] md:text-6xl text-4xl font-[500]">100 Bn+</p>
+                            <p className="font-[500] md:text-lg text-sm">Daily Ad request</p>
                         </div>
 
                         <div className="flex flex-col gap-2 items-center">
-                            <p className="text-[#0991f8] text-6xl font-[500]">8+</p>
-                            <p className="font-[500] text-lg">Years of Experience</p>
+                            <p className="text-[#0991f8] md:text-6xl text-4xl font-[500]">8+</p>
+                            <p className="font-[500] md:text-lg text-sm">Years of Experience</p>
                         </div>
                     </div>
                 </div>
