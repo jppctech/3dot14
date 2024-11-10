@@ -89,7 +89,7 @@ export default function CarouselPage() {
                   </Card>
                   <div className="w-full md:w-1/2 space-y-4">
                     <blockquote className="text-xl md:text-2xl font-medium leading-relaxed text-gray-900">
-                      "{testimonial.quote}"
+                    &quot;{testimonial.quote}&quot;
                     </blockquote>
                     <div className="space-y-1">
                       <div className="font-semibold text-gray-900">{testimonial.author}</div>
