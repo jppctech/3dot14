@@ -95,7 +95,7 @@ export default function OurApproach() {
               <div>
                 <h3 className="text-xl font-semibold mb-2">Learn</h3>
                 <p className="text-gray-600">
-                  During the learning process, features regarding users, from their first click to final conversion, are captured. This 2-3 weeks is helpful to help user for any app to find similar users, but it's based on many users' successful actions.
+                  During the learning process, features regarding users, from their first click to final conversion, are captured. This 2-3 weeks is helpful to help user for any app to find similar users, but it&apos;s based on many users&apos; successful actions.
                 </p>
               </div>
             </div>
@@ -107,7 +107,7 @@ export default function OurApproach() {
               <div>
                 <h3 className="text-xl font-semibold mb-2">Optimize</h3>
                 <p className="text-gray-600">
-                  Once the algorithm has processed enough data points during the learning process, it can start using the feature's collective learning to find similar users. In this phase, the platform starts to bring down the CPA/CAC gradually. The actual head start seeing low CPAs starts here.
+                  Once the algorithm has processed enough data points during the learning process, it can start using the feature&apos;s collective learning to find similar users. In this phase, the platform starts to bring down the CPA/CAC gradually. The actual head start seeing low CPAs starts here.
                 </p>
               </div>
             </div>
