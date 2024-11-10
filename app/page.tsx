@@ -26,7 +26,7 @@ export default function Home() {
         <motion.div animate={isOpen? {opacity: [1,0]} : {opacity: 1}} transition={{duration: 1, ease: "easeInOut"}}>
           <Header/>
           <HeroPage/>
-          <div className="flex flex-col w-full mt-[600px]">
+          <div className={`flex flex-col w-full mt-[600px] ${isOpen&& "hidden"}`}>
             <GrowYourApp/>
           </div>
         </motion.div>
