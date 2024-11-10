@@ -65,8 +65,8 @@ export default function CarouselPage() {
   }, [api])
 
   return (
-    <div className="bg-blue-50 w-screen overflow-hidden">
-      <div className="relative max-w-6xl mx-auto px-4 py-12">
+    <div className="bg-blue-50 w-full overflow-hidden">
+      <div className="relative max-w-6xl mx-auto px-4 md:px-0 py-12">
 
         {/* Decorative dots */}
         <div className="absolute top-0 left-0 grid grid-cols-9 gap-4 opacity-20">
