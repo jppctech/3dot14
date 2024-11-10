@@ -1,5 +1,6 @@
 "use client"
 
+import CarouselPage from "@/components/carosule";
 import ContactUs from "@/components/contact-us";
 import DSPComponent from "@/components/dsp-features";
 import GrowYourApp from "@/components/grow-your-app";
@@ -21,7 +22,6 @@ export default function Home() {
     setMount(true)
   })
 
-
   if(!mount){
     return null
   }
@@ -34,6 +34,7 @@ export default function Home() {
           <div className={`flex flex-col w-full mt-[600px] ${isOpen&& "hidden"}`}>
             <GrowYourApp/>
             <DSPComponent/>
+            <CarouselPage/>
           </div>
         </motion.div>
       {isOpen && (
