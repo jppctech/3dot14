@@ -40,7 +40,7 @@ export const Navigation = () => {
     if(isMobile) {
         return (
             <div className="w-full justify-end flex">
-                <Button onClick={() => onOpenMenu()} className=" bg-transparent">
+                <Button onClick={() => onOpenMenu()} className="">
                     <Menu/>
                 </Button>
             </div>
