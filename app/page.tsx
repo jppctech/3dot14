@@ -1,6 +1,7 @@
 "use client"
 
 import ContactUs from "@/components/contact-us";
+import DSPComponent from "@/components/dsp-features";
 import GrowYourApp from "@/components/grow-your-app";
 import { HeroPage } from "@/components/hero";
 import { Header } from "@/components/nav-bar";
@@ -28,6 +29,7 @@ export default function Home() {
           <HeroPage/>
           <div className={`flex flex-col w-full mt-[600px] ${isOpen&& "hidden"}`}>
             <GrowYourApp/>
+            <DSPComponent/>
           </div>
         </motion.div>
       {isOpen && (
