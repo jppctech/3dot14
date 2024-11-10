@@ -29,7 +29,6 @@ export default function ContactForm() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     console.log('Form submitted:', formData)
-    // Here you would typically send the form data to your backend
   }
 
   return (
@@ -37,24 +36,24 @@ export default function ContactForm() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="space-y-2">
           <Label htmlFor="name">Name</Label>
-          <Input id="name" name="name" value={formData.name} onChange={handleInputChange} required />
+          <Input id="name" name="name" placeholder='Name' value={formData.name} onChange={handleInputChange} required />
         </div>
         
         <div className="space-y-2">
           <Label htmlFor="email">Email</Label>
-          <Input id="email" name="email" type="email" value={formData.email} onChange={handleInputChange} required />
+          <Input id="email" name="email" placeholder='email@email.com' type="email" value={formData.email} onChange={handleInputChange} required />
         </div>
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="space-y-2">
           <Label htmlFor="phone">Phone</Label>
-          <Input id="phone" name="phone" type="tel" value={formData.phone} onChange={handleInputChange} required />
+          <Input id="phone" name="phone" type="tel" placeholder='+00 1234567890' value={formData.phone} onChange={handleInputChange} required />
         </div>
         
         <div className="space-y-2">
           <Label htmlFor="company">Company</Label>
-          <Input id="company" name="company" value={formData.company} onChange={handleInputChange} required />
+          <Input id="company" name="company" value={formData.company} placeholder='company name' onChange={handleInputChange} required />
         </div>
       </div>
       

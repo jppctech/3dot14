@@ -7,6 +7,7 @@ import Footer from "@/components/footer";
 import GrowYourApp from "@/components/grow-your-app";
 import { HeroPage } from "@/components/hero";
 import { Header } from "@/components/nav-bar";
+import { OurCLients } from "@/components/our-clients";
 import PhoneMenu from "@/components/phone-menu";
 import { useOpenGetStarted } from "@/hooks/open-get-started";
 import { useOpenMenuPhone } from "@/hooks/open-menu";
@@ -36,6 +37,7 @@ export default function Home() {
             <GrowYourApp/>
             <DSPComponent/>
             <CarouselPage/>
+            <OurCLients/>
             <Footer/>
           </div>
         </motion.div>
