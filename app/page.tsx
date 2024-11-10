@@ -5,13 +5,17 @@ import DSPComponent from "@/components/dsp-features";
 import GrowYourApp from "@/components/grow-your-app";
 import { HeroPage } from "@/components/hero";
 import { Header } from "@/components/nav-bar";
+import PhoneMenu from "@/components/phone-menu";
 import { useOpenGetStarted } from "@/hooks/open-get-started";
+import { useOpenMenuPhone } from "@/hooks/open-menu";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 export default function Home() {
   const [mount, setMount] = useState(false)
   const {isOpen} = useOpenGetStarted();
+  const { onOpenMenu, isOpenMenu} = useOpenMenuPhone();
+
 
   useEffect(() => {
     setMount(true)
@@ -24,7 +28,7 @@ export default function Home() {
 
   return (
     <div className=" relative w-full">
-        <motion.div animate={isOpen? {opacity: [1,0]} : {opacity: 1}} transition={{duration: 1, ease: "easeInOut"}}>
+        <motion.div animate={isOpen || isOpenMenu? {opacity: [1,0]} : {opacity: 1}} transition={{duration: 1, ease: "easeInOut"}}>
           <Header/>
           <HeroPage/>
           <div className={`flex flex-col w-full mt-[600px] ${isOpen&& "hidden"}`}>
@@ -37,6 +41,9 @@ export default function Home() {
           <ContactUs/>
         </motion.div>
       )}
+        <motion.div animate={isOpenMenu? {opacity: [0,1], y:0}: {opacity: 0}} initial={{y:-800}} transition={{duration: 1, ease: "easeIn"}} className=" absolute top-0 right-0 bg-white" >
+            <PhoneMenu/>
+        </motion.div>
     </div>
   );
 }

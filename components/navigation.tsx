@@ -4,11 +4,19 @@ import { ChevronDown, ChevronRight, Menu } from "lucide-react"
 import { useMedia } from "react-use"
 import { Button } from "@/components/ui/button"
 import { useOpenGetStarted } from "@/hooks/open-get-started"
+import { useOpenMenuPhone } from "@/hooks/open-menu"
+import { useEffect, useState } from "react"
 
 export const Navigation = () => {
     const isMobile = useMedia("(max-width: 1024px)", false)
     const { onOpen } = useOpenGetStarted();
+    const { onOpenMenu, isOpenMenu} = useOpenMenuPhone();
 
+    const [mount, setMount] = useState(false)
+
+    useEffect(() => {
+        setMount(true)
+      })
 
     const nav = [
         {
@@ -25,10 +33,14 @@ export const Navigation = () => {
         },
     ]
 
+    if(!mount) {
+        return null
+    }
+
     if(isMobile) {
         return (
             <div className="w-full justify-end flex">
-                <Button>
+                <Button onClick={() => onOpenMenu()} className=" bg-transparent">
                     <Menu/>
                 </Button>
             </div>
