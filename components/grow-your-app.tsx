@@ -3,8 +3,8 @@ import { Button } from "./ui/button"
 
 const GrowYourApp = () => {
     return (
-        <div className="max-w-screen-2xl mx-auto w-full flex flex-col py-10">
-            <section className="w-full flex flex-col items-center gap-10">
+        <div className="max-w-screen-2xl mx-auto w-full flex flex-col">
+            <section className="w-full flex flex-col items-center gap-10 py-10">
                 <div className="w-full flex flex-col items-center gap-4 text-center">
                     <p className="text-4xl font-[600]">The all-in-one platform to grow your app</p>
                     <p className="max-w-lg text-center text-lg font-[400]">Launch more powerful, data-driven, custom-built campaigns to achieve global growth with 3dot14</p>
