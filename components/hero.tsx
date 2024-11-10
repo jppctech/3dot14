@@ -1,7 +1,10 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
+import { useOpenGetStarted } from "@/hooks/open-get-started";
 
 export const HeroPage = () => {
+  const {onOpen} = useOpenGetStarted();
+
     return (
       <section
         className="w-full h-[650px] bg-[#121212] bg-cover bg-center absolute top-0 flex items-center"
@@ -22,7 +25,7 @@ export const HeroPage = () => {
         <div className="max-w-screen-2xl mx-auto w-full flex flex-col gap-5 px-2 md:px-0">
             <p className="text-white md:text-6xl text-4xl font-[600] max-w-2xl">Scale your app growth with high-value users</p>
             <p className=" text-white md:text-xl font-[500] max-w-2xl">Level up your mobile app user acquisition, retention and brand performance with predictive algorithms and machine learning</p>
-            <Button className="md:w-48 md:h-14 w-32 bg-[#fe6b01] hover:bg-white border border-[#fe6b01] hover:text-[#fe6b01] md:text-xl mt-4">
+            <Button className="md:w-48 md:h-14 w-32 bg-[#fe6b01] hover:bg-white border border-[#fe6b01] hover:text-[#fe6b01] md:text-xl mt-4" onClick={() => onOpen()}>
                 <p>Get Started</p>
                 <ArrowRight size={28}/>
             </Button>

@@ -3,7 +3,7 @@ import { Button } from "./ui/button"
 
 const GrowYourApp = () => {
     return (
-        <div className="max-w-screen-2xl mx-auto w-full flex flex-col">
+        <div className="max-w-screen-2xl mx-auto w-full flex flex-col relative">
             <section className="w-full flex flex-col items-center gap-10 py-10">
                 <div className="w-full flex flex-col items-center gap-4 text-center">
                     <p className="text-4xl font-[600]">The all-in-one platform to grow your app</p>

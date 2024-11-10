@@ -1,15 +1,40 @@
+"use client"
+
+import ContactUs from "@/components/contact-us";
 import GrowYourApp from "@/components/grow-your-app";
 import { HeroPage } from "@/components/hero";
 import { Header } from "@/components/nav-bar";
+import { useOpenGetStarted } from "@/hooks/open-get-started";
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [mount, setMount] = useState(false)
+  const {isOpen} = useOpenGetStarted();
+
+  useEffect(() => {
+    setMount(true)
+  })
+
+
+  if(!mount){
+    return null
+  }
+
   return (
     <div className=" relative w-full">
-      <Header/>
-      <HeroPage/>
-      <div className="flex flex-col w-full mt-[600px]">
-        <GrowYourApp/>
-      </div>
+        <motion.div animate={isOpen? {opacity: [1,0]} : {opacity: 1}} transition={{duration: 1, ease: "easeInOut"}}>
+          <Header/>
+          <HeroPage/>
+          <div className="flex flex-col w-full mt-[600px]">
+            <GrowYourApp/>
+          </div>
+        </motion.div>
+      {isOpen && (
+        <motion.div animate={isOpen? {opacity: [0,1], y: 10}: {opacity: 0}} initial={{y:-800}} transition={{duration: 1, ease: "easeInOut"}} className=" absolute top-0 mx-auto w-full">
+          <ContactUs/>
+        </motion.div>
+      )}
     </div>
   );
 }
