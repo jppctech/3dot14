@@ -1,6 +1,5 @@
 "use client"
 
-import Cardunique from "@/components/card-unique";
 import CarouselPage from "@/components/carosule";
 import ContactUs from "@/components/contact-us";
 import DSPComponent from "@/components/dsp-features";
@@ -27,9 +26,6 @@ export default function Home() {
   if(!mount){
     return null
   }
-
-  
-  
 
   return (
     <div className=" relative w-full">

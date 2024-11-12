@@ -1,9 +1,21 @@
+"use client"
 import Image from "next/image"
 import { CircleDot } from "lucide-react"
+import ContactUs from "@/components/contact-us";
+import { motion } from "framer-motion"
+import { useOpenGetStarted } from "@/hooks/open-get-started";
+import { useOpenMenuPhone } from "@/hooks/open-menu";
+import { Header } from "@/components/nav-bar";
+import Footer from "@/components/footer";
 
 export default function OurApproach() {
+  const {isOpen} = useOpenGetStarted();
+  const { isOpenMenu} = useOpenMenuPhone();
   return (
-    <div className="flex flex-col min-h-screen -mt-20 w-full">
+    <div className=" w-full absolute">
+      <motion.div animate={isOpen || isOpenMenu? {opacity: [1,0]} : {opacity: 1}} transition={{duration: 1, ease: "easeInOut"}}>
+        <Header/>
+      <div className="flex flex-col min-h-screen -mt-20 w-full relative z-[]">
       {/* Hero Section */}
       <section className="bg-zinc-950 text-white py-32 px-4 text-center">
         <div className="max-w-3xl mx-auto space-y-4">
@@ -164,6 +176,14 @@ export default function OurApproach() {
           </div>
         </div>
       </section>
+    </div>
+    <Footer/>
+    </motion.div>
+      {isOpen && (
+        <motion.div animate={isOpen? {opacity: [0,1], y: 10}: {opacity: 0}} initial={{y:-800}} transition={{duration: 1, ease: "easeInOut"}} className=" absolute top-0 mx-auto w-full">
+          <ContactUs/>
+        </motion.div>
+      )}
     </div>
   )
 }
