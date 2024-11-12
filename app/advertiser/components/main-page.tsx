@@ -105,7 +105,7 @@ export default function AdvertiserPage() {
                   Reach Your Perfect Audience
                 </h1>
                 <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
-                  Unlock the power of targeted advertising. Connect with billions of users worldwide and drive your brand's growth.
+                  Unlock the power of targeted advertising. Connect with billions of users worldwide and drive your brand&apos;s growth.
                 </p>
               </div>
               <div className="space-x-4">
@@ -158,7 +158,7 @@ export default function AdvertiserPage() {
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12">Our Clients Say</h2>
             <div className="grid gap-6 lg:grid-cols-2">
               <Card className="p-6">
-                <blockquote className="text-lg mb-4">"Our ROI has increased by 150% since we started using this platform. The targeting capabilities are unmatched."</blockquote>
+                <blockquote className="text-lg mb-4">&quot;Our ROI has increased by 150% since we started using this platform. The targeting capabilities are unmatched.&quot;</blockquote>
                 <cite className="flex items-center">
                   <Image src="/placeholder.svg?height=40&width=40" alt="Jane Doe" width={40} height={40} className="rounded-full mr-4" />
                   <div>
@@ -168,7 +168,7 @@ export default function AdvertiserPage() {
                 </cite>
               </Card>
               <Card className="p-6">
-                <blockquote className="text-lg mb-4">"The global reach and precision targeting have helped us expand into new markets we never thought possible."</blockquote>
+                <blockquote className="text-lg mb-4">&quot;The global reach and precision targeting have helped us expand into new markets we never thought possible.&quot;</blockquote>
                 <cite className="flex items-center">
                   <Image src="/placeholder.svg?height=40&width=40" alt="John Smith" width={40} height={40} className="rounded-full mr-4" />
                   <div>
