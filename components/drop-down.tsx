@@ -11,7 +11,6 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 type items = {
-    icons: any;
     label: string
 }
 
@@ -40,26 +39,28 @@ export default function DropDownMenu(content: Props) {
           window.removeEventListener('scroll', handleScroll);
         };
         }, []);
+
+        const length = content.items.length;
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild className="shadow-none outline-none">
-        <Button variant="default" className={` bg-transparent ${isScrolled ? 'text-black': "text-white"} outline-none hover:bg-transparent`}>
+        <Button variant="default" className={` bg-transparent text-black outline-none hover:bg-transparent hover:text-cyan-600 group relative items-center justify-center`}>
           {content.head}
-          <ChevronDown className="ml-2 h-4 w-4" />
+          <div className={`w-12 ${length > 0 ? "-ml-6": ""} h-[1px] group-hover:bg-cyan-600 absolute bottom-0`}/>
+          {length > 0 && <ChevronDown className="ml-2 h-4 w-4" />}
         </Button>
       </DropdownMenuTrigger>
+        {length > 0 && (
       <DropdownMenuContent className="w-56">
-        <DropdownMenuGroup>
-          {content.items.map((items,index) => (
-            <DropdownMenuItem key={index}>
-                <div className="w-12 items-center flex justify-center">
-                    {items.icons}
-                </div>
-            <span className="ml-4 py-2">{items.label}</span>
-          </DropdownMenuItem>
-          ))}
-        </DropdownMenuGroup>
+          <DropdownMenuGroup>
+            {content.items.map((items,index) => (
+                <DropdownMenuItem key={index}>
+              <span className="ml-4 py-2 font-[500]">{items.label}</span>
+              </DropdownMenuItem>
+            ))}
+          </DropdownMenuGroup>
       </DropdownMenuContent>
+        )}
     </DropdownMenu>
   )
 }
