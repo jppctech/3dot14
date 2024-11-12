@@ -11,7 +11,8 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 type items = {
-    label: string
+    label: string;
+    link: string
 }
 
 type Props = {
@@ -23,6 +24,10 @@ export default function DropDownMenu(content: Props) {
 
     const [isScrolled, setIsScrolled] = useState(false);
     const router = useRouter();
+
+    const handleroute = (url: string) => {
+      router.push(url)
+    }
 
     useEffect(() => {
         const handleScroll = () => {
@@ -54,8 +59,8 @@ export default function DropDownMenu(content: Props) {
       <DropdownMenuContent className="w-56">
           <DropdownMenuGroup>
             {content.items.map((items,index) => (
-                <DropdownMenuItem key={index}>
-              <span className="ml-4 py-2 font-[500]">{items.label}</span>
+                <DropdownMenuItem key={index} onClick={() => handleroute(items.link)}>
+                  <span className="ml-4 py-2 font-[500]">{items.label}</span>
               </DropdownMenuItem>
             ))}
           </DropdownMenuGroup>

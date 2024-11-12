@@ -1,5 +1,6 @@
 "use client"
 
+import Cardunique from "@/components/card-unique";
 import CarouselPage from "@/components/carosule";
 import ContactUs from "@/components/contact-us";
 import DSPComponent from "@/components/dsp-features";
@@ -27,6 +28,9 @@ export default function Home() {
     return null
   }
 
+  
+  
+
   return (
     <div className=" relative w-full">
         <motion.div animate={isOpen || isOpenMenu? {opacity: [1,0]} : {opacity: 1}} transition={{duration: 1, ease: "easeInOut"}}>
@@ -37,6 +41,7 @@ export default function Home() {
             <DSPComponent/>
             <CarouselPage/>
             <OurCLients/>
+            
             <Footer/>
           </div>
         </motion.div>
