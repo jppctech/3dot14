@@ -1,106 +1,11 @@
 import Cardunique from "@/components/card-unique"
+import AdvertiserPage from "./components/main-page"
 
 const advertiser = () =>{
 
-    const uniqueCard = [
-        {
-          title : "Advertising Agencies and Brands",
-          points : [
-            {
-              icon: "🌐",
-              text: "Find your audiences across two billion smartphone users globally.",
-            },
-            {
-              icon: "📱",
-              text: "Drive active engagement with smart ad experiences.",
-            },
-            {
-              icon: "📈",
-              text: "Foster responsible growth through sustainability, supply path optimization, and transparency.",
-            },
-          ],
-          buttonText : "Grow Your Brand",
-          imageUrl : "/brand-marketers-desktop.webp",
-          imageOnRight : true,
-        },
-        
-        {
-          title : "Advertising Agencies and Brands",
-          points : [
-            {
-              icon: "🌐",
-              text: "Find your audiences across two billion smartphone users globally.",
-            },
-            {
-              icon: "📱",
-              text: "Drive active engagement with smart ad experiences.",
-            },
-            {
-              icon: "📈",
-              text: "Foster responsible growth through sustainability, supply path optimization, and transparency.",
-            },
-          ],
-          buttonText : "Grow Your Brand",
-          imageUrl : "/performance-marketers-desktop.webp",
-          imageOnRight : false,
-        },
-
-        {
-            title : "Advertising Agencies and Brands",
-            points : [
-              {
-                icon: "🌐",
-                text: "Find your audiences across two billion smartphone users globally.",
-              },
-              {
-                icon: "📱",
-                text: "Drive active engagement with smart ad experiences.",
-              },
-              {
-                icon: "📈",
-                text: "Foster responsible growth through sustainability, supply path optimization, and transparency.",
-              },
-            ],
-            buttonText : "Grow Your Brand",
-            imageUrl : "/game-publishers-desktop.webp",
-            imageOnRight : false,
-          },
-
-          {
-            title : "Advertising Agencies and Brands",
-            points : [
-              {
-                icon: "🌐",
-                text: "Find your audiences across two billion smartphone users globally.",
-              },
-              {
-                icon: "📱",
-                text: "Drive active engagement with smart ad experiences.",
-              },
-              {
-                icon: "📈",
-                text: "Foster responsible growth through sustainability, supply path optimization, and transparency.",
-              },
-            ],
-            buttonText : "Grow Your Brand",
-            imageUrl : "/app-publishers-desktop.webp",
-            imageOnRight : false,
-          }
-      ]
-
-
     return(
         <div className="flex flex-col items-center justify-center gap-y-4 py-8">
-              {uniqueCard.map((card,index)=>(
-                <Cardunique
-                key={index}
-                  title={card.title}
-                  points={card.points}
-                  buttonText={card.buttonText}
-                  imageUrl={card.imageUrl}
-                  imageOnRight={card.imageOnRight}
-                />
-              ))}
+            <AdvertiserPage/>
             </div>
     )
 }
