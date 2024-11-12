@@ -21,11 +21,11 @@ export default function Cardunique({
     imageOnRight
 } : MarketingCardProps) {
   return (
-    <Card className="overflow-hidden shadow-lg max-w-[80rem] py-10 px-4">
-      <div className={`flex flex-col max-w-screen-lg mx-auto ${imageOnRight ? "md:flex-row" : "md:flex-row-reverse"}`}>
-        <div className="flex-1 p-6 md:p-8">
-          <h2 className="mb-4 text-2xl font-bold tracking-tight">{title}</h2>
-          <ul className="mb-6 space-y-4">
+    <Card className="overflow-hidden shadow-lg max-w-4xl py-6 px-8">
+      <div className={`flex flex-col gap-6 ${imageOnRight ? "md:flex-row" : "md:flex-row-reverse"}`}>
+        <div className="flex-1  items-center justify-center">
+          <h2 className="mb-4 text-xl font-bold tracking-tight">{title}</h2>
+          <ul className="mb-6 space-y-2">
             {points.map((point, index) => (
               <li key={index} className="flex items-start gap-3">
                 <span className="mt-1 text-lg">{point.icon}</span>
@@ -37,8 +37,8 @@ export default function Cardunique({
             {buttonText}
           </Button>
         </div>
-        <div className="relative aspect-square md:w-1/2">
-          <Image src={imageUrl} width={500} height={600} alt="image"/>
+        <div className="">
+          <Image src={imageUrl} width={250} height={250} alt="image"/>
         </div>
       </div>
     </Card>
