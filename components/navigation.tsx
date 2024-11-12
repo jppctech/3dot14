@@ -47,15 +47,15 @@ export const Navigation = () => {
             items: [
                 {
                     label: "User Acquisition",
-                    link: ""
+                    link: "/#"
                 },
                 {
                     label: "Branding",
-                    link: ""
+                    link: "/#"
                 },
                 {
                     label: "Publisher",
-                    link: ""
+                    link: "/#"
                 },
                 {
                     label: "Advertiser",
@@ -79,16 +79,16 @@ export const Navigation = () => {
             title: "Resources" ,
             items: [
                 {
-                    icons: "",
-                    label: "Blogs"
+                    label: "Blogs",
+                    link: "/#"
                 },
                 {
-                    icons: "",
-                    label: "Case Studies"
+                    label: "Case Studies",
+                    link: "/#"
                 },
                 {
-                    icons: "",
-                    label: "Glossary"
+                    label: "Glossary",
+                    link: "/#"
                 }
             ]
         },

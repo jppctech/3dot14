@@ -12,7 +12,7 @@ import { useEffect, useState } from "react";
 
 type items = {
     label: string;
-    link: string
+    link: string;
 }
 
 type Props = {
