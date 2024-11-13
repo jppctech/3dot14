@@ -33,8 +33,8 @@ export default function Cardunique({
               </li>
             ))}
           </ul>
-          <Button size="lg" className="w-full md:w-auto">
-            {buttonText}
+          <Button size="lg" className="w-full md:w-auto bg-[#fe6b01] hover:text-[#fe6b01] hover:bg-white hover:border border-[#fe6b01]">
+            {buttonText} 
           </Button>
         </div>
         <div className="">

@@ -1,7 +1,7 @@
 "use client"
 
 import CarouselPage from "@/components/carosule";
-import ContactUs from "@/components/contact-us";
+import ContactUs from "@/components/contact-page";
 import DSPComponent from "@/components/dsp-features";
 import Footer from "@/components/footer";
 import GrowYourApp from "@/components/grow-your-app";

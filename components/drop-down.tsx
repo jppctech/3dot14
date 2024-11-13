@@ -7,6 +7,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { ChevronDown, Users} from "lucide-react"
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -50,7 +51,9 @@ export default function DropDownMenu(content: Props) {
     <DropdownMenu>
       <DropdownMenuTrigger asChild className="shadow-none outline-none">
         <Button variant="default" className={` bg-transparent text-black outline-none hover:bg-transparent hover:text-cyan-600 group relative items-center justify-center`}>
-          {content.head}
+          <Link href={`${content.head == "Blogs"? "/blog-page": content.head == "About us" ? "/about-us": content.head == "Home" ? "/" : ""}`}>
+            {content.head}
+          </Link>
           <div className={`w-12 ${length > 0 ? "-ml-6": ""} h-[1px] group-hover:bg-cyan-600 absolute bottom-0`}/>
           {length > 0 && <ChevronDown className="ml-2 h-4 w-4" />}
         </Button>

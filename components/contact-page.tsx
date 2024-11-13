@@ -8,7 +8,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { X } from 'lucide-react'
 import { useOpenGetStarted } from '@/hooks/open-get-started'
 
-export default function ContactForm() {
+export default function Contactpage() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -37,9 +37,6 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="relative space-y-6 max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-xl">      
-        <div className=' absolute right-4 top-4 cursor-pointer' onClick={() => onClose()}>
-          <X/>
-        </div>
       <div className="  grid grid-cols-1 md:grid-cols-2 gap-6 mt-8 ">
         <div className="space-y-2">
           <Label htmlFor="name">Name</Label>

@@ -55,7 +55,7 @@ export const Navigation = () => {
                 },
                 {
                     label: "Publisher",
-                    link: "/#"
+                    link: "/publisher"
                 },
                 {
                     label: "Advertiser",
@@ -70,18 +70,15 @@ export const Navigation = () => {
         { 
             title: "Blogs",
             items: []
+
         },
         {
-            title:" About us",
+            title:"About us",
             items: []
         },
         { 
             title: "Resources" ,
             items: [
-                {
-                    label: "Blogs",
-                    link: "/#"
-                },
                 {
                     label: "Case Studies",
                     link: "/#"

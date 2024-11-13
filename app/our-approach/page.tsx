@@ -1,7 +1,7 @@
 "use client"
 import Image from "next/image"
 import { CircleDot } from "lucide-react"
-import ContactUs from "@/components/contact-us";
+import ContactUs from "@/components/contact-page";
 import { motion } from "framer-motion"
 import { useOpenGetStarted } from "@/hooks/open-get-started";
 import { useOpenMenuPhone } from "@/hooks/open-menu";
